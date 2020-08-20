@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace C__projects
 {
@@ -6,7 +7,18 @@ namespace C__projects
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Input number of payers
+            List<Player> players = new List<Player>();
+            Console.WriteLine("How many players?");
+            int howManyPlayers = Convert.ToInt32(Console.ReadLine());
+
+            // Input name of players
+            for (int i = 0; i < howManyPlayers; i++)
+            {
+                Console.WriteLine("Name the player");
+                Player player = new Player() {Name = Console.ReadLine() };
+                players.Add(player);
+            }
         }
     }
 }
