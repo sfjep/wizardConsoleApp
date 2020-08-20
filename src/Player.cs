@@ -6,5 +6,5 @@ namespace C__projects
         public int tricksGuess;
         public int tricksObtained;
         public int score;
-
+    }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Simon\\Dropbox\\C# projects\\C# projects.csproj": {}
+    "C:\\Users\\Simon\\Dropbox (Personal)\\C# projects\\Wizard\\src\\C# projects.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Simon\\Dropbox\\C# projects\\C# projects.csproj": {
+    "C:\\Users\\Simon\\Dropbox (Personal)\\C# projects\\Wizard\\src\\C# projects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Simon\\Dropbox\\C# projects\\C# projects.csproj",
+        "projectUniqueName": "C:\\Users\\Simon\\Dropbox (Personal)\\C# projects\\Wizard\\src\\C# projects.csproj",
         "projectName": "C# projects",
-        "projectPath": "C:\\Users\\Simon\\Dropbox\\C# projects\\C# projects.csproj",
+        "projectPath": "C:\\Users\\Simon\\Dropbox (Personal)\\C# projects\\Wizard\\src\\C# projects.csproj",
         "packagesPath": "C:\\Users\\Simon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Simon\\Dropbox\\C# projects\\obj\\",
+        "outputPath": "C:\\Users\\Simon\\Dropbox (Personal)\\C# projects\\Wizard\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Simon\\AppData\\Roaming\\NuGet\\NuGet.Config"
