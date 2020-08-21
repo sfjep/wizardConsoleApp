@@ -1,0 +1,1 @@
+Scoreboard for the card game Wizard

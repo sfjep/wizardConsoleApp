@@ -12,7 +12,7 @@
             "program": "${workspaceFolder}/src/bin/Debug/netcoreapp3.1/C# projects.dll",
             "args": [],
             "cwd": "${workspaceFolder}/src",
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopAtEntry": false
         },
         {
