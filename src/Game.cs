@@ -179,7 +179,7 @@ namespace C__projects
 
         private string guessNotAllowedOrLessThanZero(string input, int playerNumber, int notAllowedGuess, int turn)
         {
-            while(Convert.ToInt32(input) < 0 | (playerNumber == howManyPlayers && Convert.ToInt32(input) == notAllowedGuess))
+            while(Convert.ToInt32(input) < 0 | (playerNumber == howManyPlayers && Convert.ToInt32(input) == notAllowedGuess) | (Convert.ToInt32(input) > (turn+1)))
             {
                 if(Convert.ToInt32(input) < 0)
                 {
