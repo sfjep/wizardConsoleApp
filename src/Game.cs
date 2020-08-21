@@ -19,7 +19,7 @@ namespace C__projects
         public void initializeGame()
         {
             // Input number of players 
-            Console.WriteLine("How many players?");
+            Console.WriteLine("\nHow many players?");
             var input =  Console.ReadLine();
             howManyPlayers = Convert.ToInt32(input);
             numberOfRounds = 60 / howManyPlayers;
@@ -31,7 +31,7 @@ namespace C__projects
         {
             for (int i = 0; i < howManyPlayers; i++)
             {
-                Console.WriteLine($"Name player {i+1}");
+                Console.WriteLine($"\nName player {i+1}");
                 string name = Console.ReadLine();
                 Player player = new Player(name);
                 players.Add(player);
@@ -64,7 +64,7 @@ namespace C__projects
             {
                 while(true)
                 {   
-                    Console.WriteLine($"How many tricks does {players[player].name} want?");
+                    Console.WriteLine($"\nHow many tricks does {players[player].name} want?");
 
                     // PROVIDE NUMBER OF TRICKS THE LAST PLAYER CANNOT GUESS
                     notAllowedGuess = lastPlayerCannotGuess(playerNumber, turn, totalGuess);
@@ -75,7 +75,7 @@ namespace C__projects
                     try
                     {
                         // IF INPUT IS EQUAL TO THE NOT ALLOWED GUESS, GET NEW INPUT 
-                        input = guessNotAllowedOrLessThanZero(input, playerNumber, notAllowedGuess);
+                        input = guessNotAllowedOrLessThanZero(input, playerNumber, notAllowedGuess, turn);
                         guess = int.Parse(input);
 
                         // PLAY MINDGAMES ON DAVID
@@ -124,7 +124,7 @@ namespace C__projects
             {  
                 while(true)
                 {
-                    Console.WriteLine($"How many tricks did {players[player].name} get?");
+                    Console.WriteLine($"\nHow many tricks did {players[player].name} get?");
                     
                     var input = Console.ReadLine();
                     
@@ -140,7 +140,7 @@ namespace C__projects
                         // IF TURN AND NUMBER OF TRICKS OBTAINED DON'T ADD UP - RESTART
                         if((turn+1) != trickCount && playerNumber == howManyPlayers)
                         {
-                            Console.WriteLine("Number of tricks does not add up, try again from the top!");
+                            Console.WriteLine("\nNumber of tricks does not add up, try again from the top!");
                             trickResults.Clear();
                             goto restart;
                         };
@@ -177,18 +177,23 @@ namespace C__projects
             }
         }
 
-        private string guessNotAllowedOrLessThanZero(string input, int playerNumber, int notAllowedGuess)
+        private string guessNotAllowedOrLessThanZero(string input, int playerNumber, int notAllowedGuess, int turn)
         {
             while(Convert.ToInt32(input) < 0 | (playerNumber == howManyPlayers && Convert.ToInt32(input) == notAllowedGuess))
             {
                 if(Convert.ToInt32(input) < 0)
                 {
-                    Console.WriteLine($"Your guess cannot be negative, guess again");
+                    Console.WriteLine($"\nYour guess cannot be negative, guess again");
+                    input = Console.ReadLine();
+                }
+                else if(Convert.ToInt32(input) > (turn+1))
+                {
+                    Console.WriteLine($"\nYour guess is overly optimistic - try again");
                     input = Console.ReadLine();
                 }
                 else
                 {
-                    Console.WriteLine($"You cannot guess {notAllowedGuess}, guess again");
+                    Console.WriteLine($"\nYou cannot guess {notAllowedGuess}, guess again");
                     input = Console.ReadLine(); 
                 }     
             }
@@ -198,7 +203,7 @@ namespace C__projects
         {
             while(Convert.ToInt32(input) < 0)
             {
-                Console.WriteLine($"Result cannot be negative, try again");
+                Console.WriteLine($"\nResult cannot be negative, try again");
                 input = Console.ReadLine();
             }
             return input;
@@ -209,7 +214,7 @@ namespace C__projects
             if(playerNumber == howManyPlayers && (turn + 1) >= totalGuess)
             {   
                 var notAllowedGuess = (turn + 1) - totalGuess;
-                Console.WriteLine($"Cannot guess {notAllowedGuess}");
+                Console.WriteLine($"\nCannot guess {notAllowedGuess}");
 
                 return notAllowedGuess;
             }
