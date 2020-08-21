@@ -131,7 +131,7 @@ namespace C__projects
                     try
                     { 
                         // IF INPUT LESS THAN ZERO, GET NEW INPUT
-                        input = resultLessThanZero(input, playerNumber);
+                        input = resultLessThanZeroOrGreaterThanRoundNumber(input, playerNumber, turn);
 
                         var tricks = Convert.ToInt32(input);
                         trickResults.Add(players[player].name, tricks);
@@ -199,12 +199,20 @@ namespace C__projects
             }
             return input;
         }
-        private string resultLessThanZero(string input, int playerNumber)
+        private string resultLessThanZeroOrGreaterThanRoundNumber(string input, int playerNumber, int turn)
         {
-            while(Convert.ToInt32(input) < 0)
+            while((Convert.ToInt32(input) < 0) | (Convert.ToInt32(input) > (turn + 1)))
             {
-                Console.WriteLine($"\nResult cannot be negative, try again");
-                input = Console.ReadLine();
+                if(Convert.ToInt32(input) < 0)
+                {
+                    Console.WriteLine($"\nResult cannot be negative, try again");
+                    input = Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine($"\nResult cannot be greater than round number, try again");
+                    input = Console.ReadLine();                   
+                }
             }
             return input;
         }
