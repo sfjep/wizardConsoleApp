@@ -81,15 +81,11 @@ namespace C__projects
                     try
                     {
                         // IF INPUT IS EQUAL TO THE NOT ALLOWED GUESS, GET NEW INPUT 
-                        input = inputEqualToNotAllowedGuess(input, playerNumber, notAllowedGuess);
-                        
-                        // IF INPUT LESS THAN ZERO, GET NEW INPUT
-                        input = inputLessThanZero(input);
-
+                        input = guessNotAllowedOrLessThanZero(input, playerNumber, notAllowedGuess);
                         guess = int.Parse(input);
 
                         // PLAY MINDGAMES ON DAVID
-                        if(guess == 0 && players[player].name == "David")
+                        if(guess == 0 && players[player].name.ToLower() == "david")
                         {
                             Console.WriteLine("Pussy");
                         }
@@ -118,26 +114,98 @@ namespace C__projects
             return trickGuess;
         }
 
-        private string inputLessThanZero(string input)
+
+
+        public Dictionary<string, int> getTrickResults(int turn)
+        {
+            Dictionary<string, int> trickResults = new Dictionary<string, int>();
+
+            var seq = getRoundSequence(turn);
+
+            restart:
+            var trickCount = 0;
+            var playerNumber = 1;
+
+            foreach(int player in seq)
+            {  
+                while(true)
+                {
+                    Console.WriteLine($"How many tricks did {players[player].name} get?");
+                    
+                    var input = Console.ReadLine();
+                    
+                    try
+                    { 
+                        // IF INPUT LESS THAN ZERO, GET NEW INPUT
+                        input = resultLessThanZero(input, playerNumber);
+
+                        var tricks = Convert.ToInt32(input);
+                        trickResults.Add(players[player].name, tricks);
+                        trickCount += tricks;
+
+                        // IF TURN AND NUMBER OF TRICKS OBTAINED DON'T ADD UP - RESTART
+                        if((turn+1) != trickCount && playerNumber == howManyPlayers)
+                        {
+                            Console.WriteLine("Number of tricks does not add up, try again from the top!");
+                            trickResults.Clear();
+                            goto restart;
+                        };
+                    }
+                    catch(ArgumentException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        continue;
+                    }
+                    catch(FormatException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        continue;
+                    }
+                    break;
+                }
+                playerNumber ++;
+            }
+            return trickResults;
+        }
+
+        private int lastPlayerCannotSay(int playerNumber, int turn, int totalGuess)
+        {
+            if(playerNumber == howManyPlayers && (turn + 1) > totalGuess)
+            {   
+                var notAllowedGuess = (turn + 1) - totalGuess;
+
+                return notAllowedGuess;
+            }
+            else
+            {
+                var notAllowedGuess = -1;
+                return notAllowedGuess;
+            }
+        }
+
+        private string guessNotAllowedOrLessThanZero(string input, int playerNumber, int notAllowedGuess)
+        {
+            while(Convert.ToInt32(input) < 0 | (playerNumber == howManyPlayers && Convert.ToInt32(input) == notAllowedGuess))
+            {
+                if(Convert.ToInt32(input) < 0)
+                {
+                    Console.WriteLine($"Your guess cannot be negative, guess again");
+                    input = Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine($"You cannot guess {notAllowedGuess}, guess again");
+                    input = Console.ReadLine(); 
+                }     
+            }
+            return input;
+        }
+        private string resultLessThanZero(string input, int playerNumber)
         {
             while(Convert.ToInt32(input) < 0)
             {
-                Console.WriteLine($"Your guess has to be greater than 0, guess again");
-                input = Console.ReadLine();                                
-            }
-
-            return input;
-        }
-
-        private string inputEqualToNotAllowedGuess(string input, int playerNumber, int notAllowedGuess)
-        {
-            if(playerNumber == howManyPlayers)
-            {
-                while(Convert.ToInt32(input) == notAllowedGuess)
-                {
-                    Console.WriteLine($"You cannot guess {notAllowedGuess}, guess again");
-                    input = Console.ReadLine();
-                }
+                Console.WriteLine($"Result cannot be negative, try again");
+                input = Console.ReadLine();
             }
             return input;
         }
@@ -157,22 +225,6 @@ namespace C__projects
                 return notAllowedGuess;
             }
         }
-
-        public Dictionary<string, int> getTrickResults(int turn)
-        {
-            Dictionary<string, int> trickResults = new Dictionary<string, int>();
-        
-            var seq = getRoundSequence(turn);
-
-            foreach(int player in seq)
-            {  
-                Console.WriteLine($"How many tricks did {players[player].name} get?");
-                var tricks = Convert.ToInt32(Console.ReadLine());
-                trickResults.Add(players[player].name, tricks);
-            }
-            return trickResults;
-        }
-
 
         private List<int> getRoundSequence(int turn)
         {
