@@ -264,9 +264,6 @@ namespace C__projects
             // INPUT RESULT
             var trickResults = getTrickResults(turn);
 
-            // BUFFER IN CASE OF WRONG SCORE INPUT
-            // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
             // UPDATE SCORES
             getNewScores(trickGuess, trickResults);
         }
