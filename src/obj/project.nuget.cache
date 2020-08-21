@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "cORM/zu0xzmXRuwxOnbUhkjUPYJpgI6VpyDlQv5vhYd6I+GJwpOnL+0D+K5IE7EL7sv1HzaiWuynYVDSLBgT3w==",
+  "dgSpecHash": "fMf+vN7JY6U4FkPmj/btxAmqMpzsAF4RGN9WEkJnJwm6RuMb8M91Ao/Llw54mMrCuJsjM2u43S2tVpDkrro6hQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Simon\\Dropbox\\C# projects\\Wizard\\src\\C# projects.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Simon\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0-preview.7.20364.11\\microsoft.netcore.platforms.5.0.0-preview.7.20364.11.nupkg.sha512",
+    "C:\\Users\\Simon\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0-preview.7.20364.11\\microsoft.win32.systemevents.5.0.0-preview.7.20364.11.nupkg.sha512",
+    "C:\\Users\\Simon\\.nuget\\packages\\system.drawing.common\\5.0.0-preview.7.20364.11\\system.drawing.common.5.0.0-preview.7.20364.11.nupkg.sha512",
+    "C:\\Users\\Simon\\.nuget\\packages\\system.windows.extensions\\5.0.0-preview.7.20364.11\\system.windows.extensions.5.0.0-preview.7.20364.11.nupkg.sha512"
+  ],
   "logs": []
 }

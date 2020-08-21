@@ -24,3 +24,11 @@ C:\Users\Simon\Dropbox\C# projects\Wizard\src\obj\Debug\netcoreapp3.1\C# project
 C:\Users\Simon\Dropbox\C# projects\Wizard\src\obj\Debug\netcoreapp3.1\C# projects.dll
 C:\Users\Simon\Dropbox\C# projects\Wizard\src\obj\Debug\netcoreapp3.1\C# projects.pdb
 C:\Users\Simon\Dropbox\C# projects\Wizard\src\obj\Debug\netcoreapp3.1\C# projects.genruntimeconfig.cache
+C:\Users\Simon\Dropbox\C# projects\Wizard\src\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\Simon\Dropbox\C# projects\Wizard\src\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\Simon\Dropbox\C# projects\Wizard\src\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\Simon\Dropbox\C# projects\Wizard\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Simon\Dropbox\C# projects\Wizard\src\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Simon\Dropbox\C# projects\Wizard\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Simon\Dropbox\C# projects\Wizard\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Simon\Dropbox\C# projects\Wizard\src\obj\Debug\netcoreapp3.1\C# projects.csproj.CopyComplete

@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Media;
+
 
 namespace C__projects
 {
@@ -81,7 +83,7 @@ namespace C__projects
                         // PLAY MINDGAMES ON DAVID
                         if(guess == 0 && players[player].name.ToLower() == "david")
                         {
-                            Console.WriteLine("Pussy");
+                            playSound();
                         }
 
                         trickGuess.Add(players[player].name, guess);
@@ -297,5 +299,14 @@ namespace C__projects
                 Console.WriteLine($"{player.name}: {player.score}");                
             }           
         }
+
+        private void playSound()
+        {
+            var chicken = new System.Media.SoundPlayer();
+            var audio_dir = System.IO.Directory.GetParent(Environment.CurrentDirectory) + "\\audio\\chicken.wav";
+            chicken.SoundLocation = audio_dir;
+            chicken.PlaySync();
+        }
+
     }
 }
