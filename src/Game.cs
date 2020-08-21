@@ -88,6 +88,7 @@ namespace C__projects
 
                         guess = int.Parse(input);
 
+                        // PLAY MINDGAMES ON DAVID
                         if(guess == 0 && players[player].name == "David")
                         {
                             Console.WriteLine("Pussy");
