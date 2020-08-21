@@ -46,14 +46,8 @@ namespace C__projects
             var playerDeals = players[dealerNumber].name;
 
             // PRINT TURN AND DEALER
-            if(turn == 0)
-            {
-                Console.WriteLine($"{playerDeals} deals {turn + 1} card");
-            }
-            else
-            {
-                Console.WriteLine($"{playerDeals} deals {turn + 1} cards");
-            }
+            Console.WriteLine($"\nRound {turn + 1} - {playerDeals} deals\n");
+
         }
         
         public Dictionary<string, int> getTrickGuesses(int turn)
@@ -212,7 +206,7 @@ namespace C__projects
 
         private int lastPlayerCannotGuess(int playerNumber, int turn, int totalGuess)
         {
-            if(playerNumber == howManyPlayers && (turn + 1) > totalGuess)
+            if(playerNumber == howManyPlayers && (turn + 1) >= totalGuess)
             {   
                 var notAllowedGuess = (turn + 1) - totalGuess;
                 Console.WriteLine($"Cannot guess {notAllowedGuess}");
@@ -270,7 +264,7 @@ namespace C__projects
 
         private void getNewScores(Dictionary<string, int> trickGuess, Dictionary<string, int> trickResults)
         {
-            Console.WriteLine("New score board:");
+            Console.WriteLine("\nNew score board:");
             
             foreach(var player in players)
             {  
