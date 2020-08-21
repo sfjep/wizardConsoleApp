@@ -46,7 +46,7 @@ namespace C__projects
             var playerDeals = players[dealerNumber].name;
 
             // PRINT TURN AND DEALER
-            Console.WriteLine($"\nRound {turn + 1} - {playerDeals} deals\n");
+            Console.WriteLine($"\n\nRound {turn + 1} - {playerDeals} deals\n");
 
         }
         
