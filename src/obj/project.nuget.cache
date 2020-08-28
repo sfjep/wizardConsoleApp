@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fMf+vN7JY6U4FkPmj/btxAmqMpzsAF4RGN9WEkJnJwm6RuMb8M91Ao/Llw54mMrCuJsjM2u43S2tVpDkrro6hQ==",
+  "dgSpecHash": "4vUQxIf2lc4WtGTVb8OcYCf5nAmt+yrJLVQXM8Us0S9NYDqSfNUqXe8nSlfdtwtQ8QS3OpcS6kBCm1rmN8JJ4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Simon\\Dropbox\\C# projects\\Wizard\\src\\C# projects.csproj",
+  "projectFilePath": "C:\\C# projects\\wizardConsoleApp\\src\\C# projects.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Simon\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0-preview.7.20364.11\\microsoft.netcore.platforms.5.0.0-preview.7.20364.11.nupkg.sha512",
     "C:\\Users\\Simon\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0-preview.7.20364.11\\microsoft.win32.systemevents.5.0.0-preview.7.20364.11.nupkg.sha512",

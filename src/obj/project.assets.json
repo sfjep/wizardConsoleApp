@@ -196,11 +196,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Simon\\Dropbox\\C# projects\\Wizard\\src\\C# projects.csproj",
+      "projectUniqueName": "C:\\C# projects\\wizardConsoleApp\\src\\C# projects.csproj",
       "projectName": "C# projects",
-      "projectPath": "C:\\Users\\Simon\\Dropbox\\C# projects\\Wizard\\src\\C# projects.csproj",
+      "projectPath": "C:\\C# projects\\wizardConsoleApp\\src\\C# projects.csproj",
       "packagesPath": "C:\\Users\\Simon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Simon\\Dropbox\\C# projects\\Wizard\\src\\obj\\",
+      "outputPath": "C:\\C# projects\\wizardConsoleApp\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

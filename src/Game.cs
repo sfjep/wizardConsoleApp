@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Media;
 
-
+ 
 namespace C__projects
 {
     public class Game
@@ -307,6 +307,5 @@ namespace C__projects
             chicken.SoundLocation = audio_dir;
             chicken.PlaySync();
         }
-
     }
 }
